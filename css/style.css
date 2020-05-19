@@ -1,0 +1,19 @@
+.title {
+    color: #3F51B5;
+}
+
+.section{
+    color: #009688;
+    font-style: italic;
+    text-decoration: underline;
+}
+
+.title_geography{
+    color: #E91E63;
+    font-style: normal;
+}
+
+.link {
+    color: #FF5722;
+    text-decoration: none;
+}
