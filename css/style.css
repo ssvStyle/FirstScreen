@@ -1,0 +1,24 @@
+body {
+    font-family:  'Roboto', sans-serif;
+}
+
+h1 {
+    color: #32CFD4;
+    text-align: center;
+}
+
+.one {
+    width: 750px;
+    margin: auto;
+    border: 20px solid #F4F8FB;
+    border-collapse: collapse;
+}
+
+.two {
+    padding: 20px;
+    width: 100%;
+}
+
+.two tr td {
+    border: 1px solid black;
+}
