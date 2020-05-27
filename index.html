@@ -10,10 +10,10 @@
     <title>Email</title>
 </head>
 <body>
-<table class="one">
+<table class="tableBorder">
     <tr>
         <td>
-            <table class="two">
+            <table class="tableBody">
                 <thead>
                     <tr>
                         <td>
@@ -22,30 +22,181 @@
                     </tr>
                     <tr>
                         <td>
-                            <p class="Thanks">Thanks</p>
+                            <p class="thanksText">Thanks</p>
                         </td>
                     </tr>
                     <tr>
                         <td>
-                            <p class="text">Hey Vladimir,<br><br>
-                                Your Mailto order U5635680 has successfully been placed. You'll fin all the
-                                details about your order below, and we'll send you a shipping
-                                confirmation email as soon as your order ships. In the meantime, you can
-                                share Mailto and earn store credit.<br><br>
-                                Questions? Suggestions? Insightful showe thoughts? Shoot us an email.
-                            </p>
+                            <table>
+                                <tr>
+                                    <td>
+                                        <p class="text">Hey Vladimir,</p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <p class="text">
+                                            Your Mailto order <a href="">U5635680</a> has successfully been placed. You'll fin all the
+                                            details about your order below, and we'll send you a shipping
+                                            confirmation email as soon as your order ships. In the meantime, you can
+                                            <a href="">share Mailto and earn store credit.</a><br>
+                                        </p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <p class="text">
+                                            Questions? Suggestions? Insightful showe thoughts? <a href="">Shoot us an email.</a>
+                                        </p>
+                                    </td>
+                                </tr>
+                            </table>
                         </td>
                     </tr>
                 </thead>
 
                 <tbody>
+                <!--start info-->
+                    <tr>
+                        <td>
+                            <table class="info">
+                                <thead>
+                                    <tr>
+                                        <th><p>Order Number</p></th>
+                                        <th><p>Order Date</p></th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td><p>U5635680</p></td>
+                                        <td><p>17 January 2017</p></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <table class="info">
 
+                                <thead>
+                                    <tr>
+                                        <th><p>Shipping Address</p></th>
+                                        <th><p>Billing Address</p></th>
+                                    </tr>
+                                </thead>
 
+                                <tbody>
+                                    <tr>
+                                        <td><p>Vladimir Kudinov 340 Main St. STE. 680, Venice, CA 90291</p></td>
+                                        <td><p>Vladimir Kudinov 340 Main St. STE. 680, Venice, CA 90291</p></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </td>
+                    </tr>
+                    <!--end info-->
 
+                    <!--start cart-->
+                    <tr>
+                        <td>
+                            <table class="cart">
+                                <caption><p>Here's what you ordered:</p></caption>
+                                <thead>
+                                    <tr>
+                                        <th width="70%"><p>Item</p></th>
+                                        <th class="price"><p>Qty</p></th>
+                                        <th class="price"><p>Price</p></th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td width="70%"><img style="float: left;" width="100" src="images/1.jpg"><p>Yanagi Tea Kettle Sori Yanagi Medium</p></td>
+                                        <td class="price"><p>1</p></td>
+                                        <td class="price"><p>$49</p></td>
+                                    </tr>
+                                    <tr>
+                                        <td width="70%"><img  style="float: left;" width="100"  src="images/2.jpg"><p>Analog Travel Alarm Clock Braun</p></td>
+                                        <td class="price"><p>1</p></td>
+                                        <td class="price"><p>$29</p></td>
+                                    </tr>
+                                    <tr>
+                                        <td colspan="3">
+                                            <table style="float: right; text-align: right;">
+                                                <tr>
+                                                    <td>Subtotal: $78</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Shipping: $5</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Tax: $0</td>
+                                                </tr>
+                                            </table>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td colspan="3" style="border-bottom: 3px solid black;  padding-top: 20px;">
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td colspan="3" style="text-align: right; padding-top: 20px">
+                                            <b>TOTAL: $83</b>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </td>
+                    </tr>
+                    <!--end cart-->
+
+                    <!--start item-->
+                    <tr>
+                        <td>
+                            <table class="item">
+                                <caption style="text-align: left">Trending products</caption>
+                                <tbody>
+                                <tr>
+                                    <td>
+                                        <div class="img_1">
+                                        </div>
+                                        <p class="header">Yanagi Tea Kettle</p>$12
+                                        <p>Sori Yanagi</p>
+                                    </td>
+                                    <td>
+                                        <div class="img_2">
+                                        </div>
+                                        <p class="header">Yanagi Tea Kettle</p>$26
+                                        <p>Sori Yanagi</p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <div class="img_3">
+                                        </div>
+                                        <p class="header">Yanagi Tea Kettle</p><p style="float: right">$50</p>
+                                        <p>Sori Yanagi</p>
+                                    </td>
+                                    <td>
+                                        <div class="img_4">
+                                        </div>
+                                        <p class="header">Yanagi Tea Kettle</p>$70
+                                        <p>Sori Yanagi</p>
+                                    </td>
+                                </tr>
+                                </tbody>
+                            </table>
+                        </td>
+                    </tr>
+                    <!--end item-->
                 </tbody>
 
                 <tfoot>
-
+                    <tr>
+                        <td>
+                            <button style="background-color: #27CBCC; color: #F4F8FB; width: 100%; height: 40px; border-radius: 5px; font-size: 1.4em">EiBack to Shop</button>
+                        </td>
+                    </tr>
                 </tfoot>
             </table>
         </td>
