@@ -7,6 +7,7 @@
     <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
 
     <link href="https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap" rel="stylesheet">
+
     <title>Email</title>
 </head>
 <body>
@@ -21,8 +22,8 @@
                         </td>
                     </tr>
                     <tr>
-                        <td>
-                            <p class="thanksText">Thanks</p>
+                        <td class="thanksText">
+                            Thanks
                         </td>
                     </tr>
                     <tr>
@@ -30,12 +31,12 @@
                             <table>
                                 <tr>
                                     <td>
-                                        <p class="text">Hey Vladimir,</p>
+                                        <p>Hey Vladimir,</p>
                                     </td>
                                 </tr>
                                 <tr>
                                     <td>
-                                        <p class="text">
+                                        <p>
                                             Your Mailto order <a href="">U5635680</a> has successfully been placed. You'll fin all the
                                             details about your order below, and we'll send you a shipping
                                             confirmation email as soon as your order ships. In the meantime, you can
@@ -45,8 +46,8 @@
                                 </tr>
                                 <tr>
                                     <td>
-                                        <p class="text">
-                                            Questions? Suggestions? Insightful showe thoughts? <a href="">Shoot us an email.</a>
+                                        <p>
+                                            Questions? Suggestions? Insightful showe thoughts? <a href="mailto:test@test.com">Shoot us an email.</a>
                                         </p>
                                     </td>
                                 </tr>
@@ -61,7 +62,7 @@
                         <td>
                             <table class="info">
                                 <thead>
-                                    <tr>
+                                    <tr class="grayLine">
                                         <th><p>Order Number</p></th>
                                         <th><p>Order Date</p></th>
                                     </tr>
@@ -80,7 +81,7 @@
                             <table class="info">
 
                                 <thead>
-                                    <tr>
+                                    <tr class="grayLine">
                                         <th><p>Shipping Address</p></th>
                                         <th><p>Billing Address</p></th>
                                     </tr>
@@ -103,45 +104,63 @@
                             <table class="cart">
                                 <caption><p>Here's what you ordered:</p></caption>
                                 <thead>
-                                    <tr>
-                                        <th width="70%"><p>Item</p></th>
-                                        <th class="price"><p>Qty</p></th>
-                                        <th class="price"><p>Price</p></th>
+                                    <tr class="grayLine">
+                                        <th class="widt-70"><p>Item</p></th>
+                                        <th class="tright"><p>Qty</p></th>
+                                        <th class="tright"><p>Price</p></th>
                                     </tr>
                                 </thead>
                                 <tbody>
                                     <tr>
-                                        <td width="70%"><img style="float: left;" width="100" src="images/1.jpg"><p>Yanagi Tea Kettle Sori Yanagi Medium</p></td>
-                                        <td class="price"><p>1</p></td>
-                                        <td class="price"><p>$49</p></td>
+                                        <td class="widt-70">
+                                            <div class="img_1_prew"></div>
+                                            <p class="b">Yanagi Tea Kettle</p>
+                                            <p>Sori Yanagi</p>
+                                            <p>Medium</p>
+                                        </td>
+                                        <td class="tright">
+                                            <p>1</p>
+                                        </td>
+                                        <td class="tright">
+                                            <p class="b">$49</p>
+                                        </td>
                                     </tr>
+
+                                    <tr><td colspan="3" class="grayLine"></td></tr>
+
                                     <tr>
-                                        <td width="70%"><img  style="float: left;" width="100"  src="images/2.jpg"><p>Analog Travel Alarm Clock Braun</p></td>
-                                        <td class="price"><p>1</p></td>
-                                        <td class="price"><p>$29</p></td>
+                                        <td class="widt-70">
+                                            <div class="img_2_prew"></div>
+                                            <p class="b">Analog Travel Alarm Clock </p>
+                                            <p>Braun</p>
+                                        </td>
+                                        <td><p class="tright">1</p></td>
+                                        <td><p class="b tright">$29</p></td>
                                     </tr>
+
+                                    <tr><td colspan="3" class="grayLine"></td></tr>
+
                                     <tr>
-                                        <td colspan="3">
-                                            <table style="float: right; text-align: right;">
-                                                <tr>
-                                                    <td>Subtotal: $78</td>
-                                                </tr>
-                                                <tr>
-                                                    <td>Shipping: $5</td>
-                                                </tr>
-                                                <tr>
-                                                    <td>Tax: $0</td>
-                                                </tr>
-                                            </table>
+                                        <td colspan="3" class="total pt-10">
+                                            <p class="b">Subtotal: $78</p>
                                         </td>
                                     </tr>
                                     <tr>
-                                        <td colspan="3" style="border-bottom: 3px solid black;  padding-top: 20px;">
+                                        <td colspan="3" class="total">
+                                            <p class="b">Shipping: $5</p>
                                         </td>
                                     </tr>
                                     <tr>
-                                        <td colspan="3" style="text-align: right; padding-top: 20px">
-                                            <b>TOTAL: $83</b>
+                                        <td colspan="3" class="total">
+                                            <p class="b">Tax: $0</p>
+                                        </td>
+                                    </tr>
+
+                                    <tr><td colspan="3" class="blackLine pt-10"></td></tr>
+
+                                    <tr>
+                                        <td colspan="3" class="pt-10 total">
+                                            <p class="totalPrice">TOTAL: $83</p>
                                         </td>
                                     </tr>
                                 </tbody>
@@ -154,19 +173,23 @@
                     <tr>
                         <td>
                             <table class="item">
-                                <caption style="text-align: left">Trending products</caption>
+                                <caption>Trending products</caption>
                                 <tbody>
                                 <tr>
                                     <td>
                                         <div class="img_1">
                                         </div>
-                                        <p class="header">Yanagi Tea Kettle</p>$12
+                                        <p class="b">Yanagi Tea Kettle</p>
+                                        <p class="b right">$12</p>
+                                        <br>
                                         <p>Sori Yanagi</p>
                                     </td>
                                     <td>
                                         <div class="img_2">
                                         </div>
-                                        <p class="header">Yanagi Tea Kettle</p>$26
+                                        <p class="b">Yanagi Tea Kettle</p>
+                                        <p class="b right">$26</p>
+                                        <br>
                                         <p>Sori Yanagi</p>
                                     </td>
                                 </tr>
@@ -174,13 +197,17 @@
                                     <td>
                                         <div class="img_3">
                                         </div>
-                                        <p class="header">Yanagi Tea Kettle</p><p style="float: right">$50</p>
+                                        <p class="b">Yanagi Tea Kettle</p>
+                                        <p class="b right">$50</p>
+                                        <br>
                                         <p>Sori Yanagi</p>
                                     </td>
                                     <td>
                                         <div class="img_4">
                                         </div>
-                                        <p class="header">Yanagi Tea Kettle</p>$70
+                                        <p class="b">Yanagi Tea Kettle</p>
+                                        <p class="b right">$70</p>
+                                        <br>
                                         <p>Sori Yanagi</p>
                                     </td>
                                 </tr>
@@ -194,7 +221,7 @@
                 <tfoot>
                     <tr>
                         <td>
-                            <button style="background-color: #27CBCC; color: #F4F8FB; width: 100%; height: 40px; border-radius: 5px; font-size: 1.4em">EiBack to Shop</button>
+                            <a href="" class="button">EiBack to Shop</a>
                         </td>
                     </tr>
                 </tfoot>
