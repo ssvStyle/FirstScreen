@@ -2,233 +2,140 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;800&display=swap" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
-
-    <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
-
-    <link href="https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap" rel="stylesheet">
-
-    <title>Email</title>
+    <title>Hillel</title>
 </head>
 <body>
-<table class="tableBorder">
-    <tr>
-        <td>
-            <table class="tableBody">
-                <thead>
-                    <tr>
-                        <td>
-                            <h1>mailto</h1>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td class="thanksText">
-                            Thanks
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>
-                            <table>
-                                <tr>
-                                    <td>
-                                        <p>Hey Vladimir,</p>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>
-                                        <p>
-                                            Your Mailto order <a href="">U5635680</a> has successfully been placed. You'll fin all the
-                                            details about your order below, and we'll send you a shipping
-                                            confirmation email as soon as your order ships. In the meantime, you can
-                                            <a href="">share Mailto and earn store credit.</a><br>
-                                        </p>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>
-                                        <p>
-                                            Questions? Suggestions? Insightful showe thoughts? <a href="mailto:test@test.com">Shoot us an email.</a>
-                                        </p>
-                                    </td>
-                                </tr>
-                            </table>
-                        </td>
-                    </tr>
-                </thead>
+<div class="container">
+    <section class="head_panel">
+        <header class="header">
+            <nav class="header__nav">
+                <div class="menu">
+                    <a href="" class="header__nav__selected">Киев</a>
+                    <ul class="drop_down">
+                        <li><a href="">О школе</a></li>
+                        <li><a href="">Преподаватели</a></li>
+                        <li><a href="">Стать преподавателем</a></li>
+                        <li><a href="">Отзывы</a></li>
+                        <li><a href="">Проверка сертификата</a></li>
+                    </ul>
+                </div>
+                <a href="" class="header__link">Одесса</a>
+                <a href="" class="header__link">Днепр</a>
+                <a href="" class="header__link">Харьков</a>
+                <a href="" class="header__nav__online">online</a>
+            </nav>
 
-                <tbody>
-                <!--start info-->
-                    <tr>
-                        <td>
-                            <table class="info">
-                                <thead>
-                                    <tr class="grayLine">
-                                        <th><p>Order Number</p></th>
-                                        <th><p>Order Date</p></th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr>
-                                        <td><p>U5635680</p></td>
-                                        <td><p>17 January 2017</p></td>
-                                    </tr>
-                                </tbody>
-                            </table>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>
-                            <table class="info">
+            <nav class="header__nav__contact">
+                <div class="header__nav">
+                    <img src="images/phone-call.svg" alt="">
+                    <span>+38 (093) 543 77 47</span>
+                    <img src="images/email.svg" alt="">
+                    <a class="email" href="mailto:kyiv@ithillel@gmail.com">kyiv@ithillel@gmail.com</a>
+                </div>
+                <div class="header__nav__lang">
+                    <a href="" class="header__nav__selected">Рус</a>
+                    <a href="" class="header__link" >Укр</a>
+                </div>
+            </nav>
+        </header>
+    </section>
+    <main>
+        <section class="info">
+            <div class="info__text">
+                <div><img src="images/logo.svg" alt=""></div>
+                <span class="learn">Учись ради мечты!</span>
+                <div class="info__button">
+                    <a class="button" href="">Записаться на курс</a>
+                </div>
 
-                                <thead>
-                                    <tr class="grayLine">
-                                        <th><p>Shipping Address</p></th>
-                                        <th><p>Billing Address</p></th>
-                                    </tr>
-                                </thead>
+            </div>
+            <div class="info__map">
+                <img src="images/map.svg" alt="">
+                <div class="info__map__kiev">
+                    <span>киев</span>
+                    <img src="images/city.svg" alt="">
+                    <img  class="point" src="images/map_point.svg" alt="">
+                </div>
+                <div class="info__map__odessa">
+                    <span>одесса</span>
+                    <img src="images/city.svg" alt="">
+                </div>
 
-                                <tbody>
-                                    <tr>
-                                        <td><p>Vladimir Kudinov 340 Main St. STE. 680, Venice, CA 90291</p></td>
-                                        <td><p>Vladimir Kudinov 340 Main St. STE. 680, Venice, CA 90291</p></td>
-                                    </tr>
-                                </tbody>
-                            </table>
-                        </td>
-                    </tr>
-                    <!--end info-->
+                <div class="info__map__harkov">
+                    <span>харьков</span>
+                    <img src="images/city.svg" alt="">
+                </div>
 
-                    <!--start cart-->
-                    <tr>
-                        <td>
-                            <table class="cart">
-                                <caption><p>Here's what you ordered:</p></caption>
-                                <thead>
-                                    <tr class="grayLine">
-                                        <th class="widt-70"><p>Item</p></th>
-                                        <th class="tright"><p>Qty</p></th>
-                                        <th class="tright"><p>Price</p></th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr>
-                                        <td class="widt-70">
-                                            <div class="img_1_prew"></div>
-                                            <p class="b">Yanagi Tea Kettle</p>
-                                            <p>Sori Yanagi</p>
-                                            <p>Medium</p>
-                                        </td>
-                                        <td class="tright">
-                                            <p>1</p>
-                                        </td>
-                                        <td class="tright">
-                                            <p class="b">$49</p>
-                                        </td>
-                                    </tr>
+                <div class="info__map__dnepr">
+                    <span>днепр</span>
+                    <img src="images/city.svg" alt="">
+                </div>
+            </div>
+        </section>
+        <section class="students">
+            <div class="students__first">
+                <span class="learn">12000</span>
+                <p>Выпускников Школы</p>
+            </div>
+            <div class="students__second">
+                <span class="learn">12000</span>
+                <p>Выпускников Школы</p>
+            </div>
+        </section>
+        
+        <section class="blocks">
+            
+            <div class="block">
+                <div class="block__text">
+                    <span class="learn">7</span>
+                    <p>Школа предоставляет образовательные услуги</p>
+                </div>
+            </div>
 
-                                    <tr><td colspan="3" class="grayLine"></td></tr>
+            <div class="block">
+                <div class="block__text">
+                    <span class="learn">7</span>
+                    <p>Школа предоставляет образовательные услуги</p>
+                </div>
+            </div>
 
-                                    <tr>
-                                        <td class="widt-70">
-                                            <div class="img_2_prew"></div>
-                                            <p class="b">Analog Travel Alarm Clock </p>
-                                            <p>Braun</p>
-                                        </td>
-                                        <td><p class="tright">1</p></td>
-                                        <td><p class="b tright">$29</p></td>
-                                    </tr>
+            <div class="block">
+                <div class="block__text">
+                    <span class="learn">7</span>
+                    <p>Школа предоставляет образовательные услуги</p>
+                </div>
+            </div>
 
-                                    <tr><td colspan="3" class="grayLine"></td></tr>
+            <div class="block">
+                <div class="block__text">
+                    <span class="learn">7</span>
+                    <p>Школа предоставляет образовательные услуги</p>
+                </div>
+            </div>
 
-                                    <tr>
-                                        <td colspan="3" class="total pt-10">
-                                            <p class="b">Subtotal: $78</p>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td colspan="3" class="total">
-                                            <p class="b">Shipping: $5</p>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td colspan="3" class="total">
-                                            <p class="b">Tax: $0</p>
-                                        </td>
-                                    </tr>
+            <div class="block">
+                <div class="block__text">
+                    <span class="learn">7</span>
+                    <p>Школа предоставляет образовательные услуги</p>
+                </div>
+            </div>
 
-                                    <tr><td colspan="3" class="blackLine pt-10"></td></tr>
+            <div class="block">
+                <div class="block__text">
+                    <span class="learn">7</span>
+                    <p>Школа предоставляет образовательные услуги</p>
+                </div>
+            </div>
+            
+        </section>
 
-                                    <tr>
-                                        <td colspan="3" class="pt-10 total">
-                                            <p class="totalPrice">TOTAL: $83</p>
-                                        </td>
-                                    </tr>
-                                </tbody>
-                            </table>
-                        </td>
-                    </tr>
-                    <!--end cart-->
 
-                    <!--start item-->
-                    <tr>
-                        <td>
-                            <table class="item">
-                                <caption>Trending products</caption>
-                                <tbody>
-                                <tr>
-                                    <td>
-                                        <div class="img_1">
-                                        </div>
-                                        <p class="b">Yanagi Tea Kettle</p>
-                                        <p class="b right">$12</p>
-                                        <br>
-                                        <p>Sori Yanagi</p>
-                                    </td>
-                                    <td>
-                                        <div class="img_2">
-                                        </div>
-                                        <p class="b">Yanagi Tea Kettle</p>
-                                        <p class="b right">$26</p>
-                                        <br>
-                                        <p>Sori Yanagi</p>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>
-                                        <div class="img_3">
-                                        </div>
-                                        <p class="b">Yanagi Tea Kettle</p>
-                                        <p class="b right">$50</p>
-                                        <br>
-                                        <p>Sori Yanagi</p>
-                                    </td>
-                                    <td>
-                                        <div class="img_4">
-                                        </div>
-                                        <p class="b">Yanagi Tea Kettle</p>
-                                        <p class="b right">$70</p>
-                                        <br>
-                                        <p>Sori Yanagi</p>
-                                    </td>
-                                </tr>
-                                </tbody>
-                            </table>
-                        </td>
-                    </tr>
-                    <!--end item-->
-                </tbody>
 
-                <tfoot>
-                    <tr>
-                        <td>
-                            <a href="" class="button">EiBack to Shop</a>
-                        </td>
-                    </tr>
-                </tfoot>
-            </table>
-        </td>
-    </tr>
-</table>
 
+
+    </main>
+</div>
 </body>
 </html>
