@@ -1,32 +1,32 @@
 body{
     font-family: 'Open Sans', sans-serif;
-    margin: 0;
-}
-
-main {
-    background: linear-gradient(124.64deg, rgba(33, 76, 227, 0.5) 0%, rgba(67, 110, 221, 0.5) 47.4%, rgba(173, 57, 214, 0.5) 100%);
-    height: 1000px;/*?????*/
-}
-
-header, .email, header a {
     font-weight: 600;
     font-size: 12px;
     line-height: 16px;
+    margin: 0;
+}
+
+header, .email, header a {
     color: #244C8E;
+}
+
+.bg {
+    background: linear-gradient(124.64deg, rgba(33, 76, 227, 0.5) 0%, rgba(67, 110, 221, 0.5) 47.4%, rgba(173, 57, 214, 0.5) 100%), url('../images/bg.jpg');
+    background-size: cover;
+}
+
+.container, .header {
+    margin: auto;
+    width: 1230px;
 }
 
 .head_panel {
     width: 100%;
-    box-sizing: border-box;
     position: fixed;
     top: 0;
+    left: 0;
     background: rgba(227, 231, 237, 0.9);
     height: 45px;
-}
-
-body {
-    background: url('../images/bg.jpg');
-    background-size: 100%;
 }
 
 .header {
@@ -34,11 +34,6 @@ body {
     justify-content: space-between;
     align-items: center;
     margin: auto;
-}
-
-.header, .info, .students, .blocks {
-    margin: auto;
-    width: 1230px;
 }
 
 .header__nav {
@@ -116,7 +111,7 @@ body {
     box-sizing: border-box;
     display: none;
     background: rgba(189, 201, 220, 0.9);
-    border-radius: 0px 0px 2px 2px;
+    border-radius: 0 0 2px 2px;
 }
 
 .drop_down a:hover {
@@ -129,7 +124,7 @@ body {
 }
 
 .drop_down li {
-    margin: 5px 0px;
+    margin: 5px 0;
 }
 
 .drop_down li:last-child {
@@ -150,8 +145,6 @@ main {
     padding-top: 45px;
 }
 
-/*info*/
-
 .info {
     padding-top: 115px;
     display: flex;
@@ -171,30 +164,34 @@ main {
 
 .info__map__kiev {
     top: 68px;
-    left: 196px;
+    left: 220px;
 }
 .point {
-    top: -6px;
-    left: 58px;
+    top: -7px;
+    left: 38px;
 }
 
 .info__map__odessa {
     bottom: 90px;
-    left: 176px;
+    left: 200px;
 }
 
 .info__map__harkov {
     top: 107px;
-    right: 176px;
+    right: 200px;
 }
 
 .info__map__dnepr {
     bottom: 166px;
-    left: 320px;
+    left: 344px;
 }
 
 .info__map__kiev, .info__map__odessa, .info__map__harkov, .info__map__dnepr, .point {
     position: absolute;
+}
+
+.info__map span {
+    margin: 0;
 }
 
 .info__text, .students {
@@ -221,10 +218,6 @@ main {
     background: #4ED401;
     padding: 10px;
     border-radius: 2px;
-    color: white;
-    font-weight: bold;
-    font-size: 18px;
-    line-height: 25px;
     text-decoration: none;
 }
 
@@ -251,7 +244,7 @@ main {
     padding-right: 10px;
 }
 
-.students__first p, .students__second p {
+.students__first p, .students__second p, .button {
     color: white;
     font-weight: bold;
     font-size: 18px;
@@ -259,25 +252,14 @@ main {
 }
 
 .students__first span::after {
-    content: '+';
     width: 25px;
     height: 25px;
     font-size: 25px;
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: 50%;
-    background: #4ED401;
-    color: white;
-    vertical-align: 10%;
-   margin-left: 10px;
+    margin-left: 10px;
 }
 
-/*6 bloks*/
-
 .blocks {
-
-    padding-top: 30px;
+    padding: 30px 0;
     display: flex;
     flex-wrap: wrap;
     align-items: center;
@@ -285,20 +267,30 @@ main {
 }
 
 .block {
-    flex: 1 1 30%;
+    flex: 1 1 33%;
     display: flex;
+    margin: 10px 0;
 }
 
-.block .block__text::before{
-    content: url(../images/rocket.svg);
-    display: inline-flex;
+.seven {
+    font-size: 30px;
+}
+
+
+.block__text__stratch {
+    margin-right: 10px;
+    display: flex;
     align-self: stretch;
-    vertical-align: -5px;
-    padding-right: 10px;
+    align-items: start;
+}
+
+.block__text__stratch img {
+    padding-top: 10px;
+    width: 35px;
 }
 
 .block__text {
-    width: 230px;
+    width: 155px;
 }
 
 .block__text span::after{
@@ -314,17 +306,12 @@ main {
 
 .block__text p {
     color: white;
-    font-weight: 600;
-    font-size: 12px;
-    line-height: 16px;
-    margin-left: 70px;
+    margin: 0;
 }
 
-.block:nth-child(2n+2) span::after{
+.block:nth-child(2n+2) span::after, .students__first span::after {
+
     content: '+';
-    width: 0px;
-    height: 14px;
-    font-size: 15px;
     display: inline-flex;
     align-items: center;
     justify-content: center;
@@ -332,6 +319,13 @@ main {
     background: #4ED401;
     color: white;
     vertical-align: 10%;
+    margin-left: 10px;
+}
+
+.block:nth-child(2n+2) span::after{
+    width: 0;
+    height: 14px;
+    font-size: 15px;
 }
 
 .block:nth-child(2), .block:nth-child(5){
@@ -341,3 +335,201 @@ main {
 .block:nth-child(3), .block:nth-child(6){
     justify-content: flex-end;
 }
+
+/*form*/
+
+.form {
+    margin: 30px auto;
+    width: 430px;
+    height: 420px;
+    background: #F6F6F6;
+    border-radius: 4px;
+    box-sizing: border-box;
+    padding: 25px;
+    box-shadow: 0px 6px 3px rgba(0,0,0,0.5);
+}
+
+.form__header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+
+}
+
+.form__header h2 {
+    font-family: Open Sans;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 27px;
+    margin: 0;
+    color: #244C8E;
+}
+
+.callBack {
+    width: 15px;
+    height: 15px;
+    background: #244C8E;
+    display: inline-flex;
+    justify-content: center;
+    border-radius: 50%;
+    color: white;
+    margin-right: 5px;
+}
+
+
+.form__question {
+    display: flex;
+    margin-bottom: 20px;
+}
+
+.form__question p {
+    font-family: Open Sans;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 19px;
+    color: #244C8E;
+    margin: 0;
+}
+
+.form__group {
+    margin-right: -25px;
+    margin-left: -25px;
+    padding: 10px 30px 20px;
+    background: white;
+}
+
+.form__group div {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #EEEEEE;
+    margin-top: 10px;
+
+}
+
+.form__group div input::placeholder {
+    color: #EEEEEE;
+
+}
+
+.form__group input, .form__group select {
+    width: 180px;
+    border: none;
+    background: none;
+    padding: 7px 0;
+}
+
+.form__group input:focus{
+    border: none;
+    background: none;
+}
+
+.form__group label {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 16px;
+    color: #808080;
+}
+
+
+
+
+
+/* color circle experiment!*/
+.form__group div {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row-reverse;
+}
+
+.form__group label::before {
+    background: #FEAC30;
+}
+
+.form__group input:required:focus:valid + label::before, .form__group input:required:valid + label::before{
+    background: green;
+}
+
+.form__group input:required:focus:invalid + label::before{
+    background: red;
+}
+
+.form__group label::before,
+.form__group input:required:focus:valid + label::before,
+.form__group input:required:valid + label::before,
+.form__group input:required:focus:invalid + label::before {
+    content: '';
+    width: 10px;
+    height: 10px;
+    display: inline-flex;
+    align-items: center;
+    border-radius: 50%;
+    vertical-align: 20%;
+    margin-right: 10px;
+    border: none;
+}
+/*end color circle*/
+
+
+
+
+
+.form__group select {
+    -webkit-appearance: none;
+}
+
+.form form button {
+    margin-top: 15px;
+    width: 100%;
+    height: 35px;
+    background: #E4E8ED;
+    border-radius: 4px;
+    border: none;
+    font-weight: bold;
+    font-size: 11px;
+    line-height: 15px;
+    letter-spacing: 0.15em;
+    color: #98ACCC;
+}
+
+/*end form*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
