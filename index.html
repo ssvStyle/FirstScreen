@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;800&display=swap" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
+    <script src="js/function.js"></script>
     <title>Hillel</title>
 </head>
 <body>
@@ -47,7 +48,7 @@
                     <div><img src="images/logo.svg" alt=""></div>
                     <span class="learn">Учись ради мечты!</span>
                     <div class="info__button">
-                        <a class="button" href="">Записаться на курс</a>
+                        <button id="corse_registr" class="button" href="">Записаться на курс</button>
                     </div>
                 </div>
                 <div class="info__map">
@@ -139,50 +140,52 @@
                     </div>
                 </div>
             </section>
-            <section class="form">
-                <div class="form__header">
-                    <h2>Заявка на регистрацию</h2>
-                    <img src="images/to-close.svg" alt="">
-                </div>
-                <div class="form__question">
-                    <span class="callBack">?</span>
-                    <p>Оставьте ваши контактные данные,<br> и мы вам обязательно перезвоним!</p>
-                </div>
-                <form method="post">
-                    <div class="form__group">
-                        <div>
-                            <input type="text" id="name" name="name" placeholder="Mark" required>
-                            <label for="name">Имя</label>
-                        </div>
-                        <div>
-                            <input type="email" id="email" name="email" placeholder="mark@gmail.com" required>
-                            <label for="email">Email</label>
-                        </div>
-                        <div>
-                            <input type="tel" id="phone" name="phone" placeholder="+38 (ххх) ххх-хх-хх"  required>
-                            <label for="phone">Телефон</label>
-                        </div>
-                        <div>
-                            <select id="town">
-                                <option selected>Киев</option>
-                                <option>Харьков</option>
-                                <option>Днепр</option>
-                                <option>Одесса</option>
-                            </select>
-                            <label for="town">Город</label>
-                        </div>
-
-                        <div>
-                            <select id="cours">
-                                <option selected>Front-end</option>
-                                <option>Front-end pro</option>
-                            </select>
-                            <label for="cours">Курс</label>
-                        </div>
+            <div class="modal" id="modal">
+                <section class="form">
+                    <div class="form__header">
+                        <h2>Заявка на регистрацию</h2>
+                        <img id="corse_registr_close" class="registr_close" src="images/to-close.svg" alt="">
                     </div>
-                    <button disabled>ОСТАВИТЬ ЗАЯВКУ</button>
-                </form>
-            </section>
+                    <div class="form__question">
+                        <span class="callBack">?</span>
+                        <p>Оставьте ваши контактные данные,<br> и мы вам обязательно перезвоним!</p>
+                    </div>
+                    <form method="post">
+                        <div class="form__group">
+                            <div>
+                                <input type="text" id="name" name="name" placeholder="Марк" pattern="^[А-Я]{1}[а-яЁё]{1,}$" required>
+                                <label for="name">Имя</label>
+                            </div>
+                            <div>
+                                <input type="email" id="email" name="email" placeholder="mark@gmail.com" required>
+                                <label for="email">Email</label>
+                            </div>
+                            <div>
+                                <input type="tel" id="phone" name="phone" placeholder="+380xxxxxxxxx" pattern="^\+380[0-9]{9}$"  required>
+                                <label for="phone">Телефон</label>
+                            </div>
+                            <div>
+                                <select id="town" required>
+                                    <option selected>Киев</option>
+                                    <option>Харьков</option>
+                                    <option>Днепр</option>
+                                    <option>Одесса</option>
+                                </select>
+                                <label for="town">Город</label>
+                            </div>
+                            <div>
+                                <select id="cours" required>
+                                    <option selected disabled value="">Выберите</option>
+                                    <option>Front-end</option>
+                                    <option>Front-end pro</option>
+                                </select>
+                                <label for="cours">Курс</label>
+                            </div>
+                        </div>
+                        <button type="submit">ОСТАВИТЬ ЗАЯВКУ</button>
+                    </form>
+                </section>
+            </div>
         </main>
     </div>
 </div>
