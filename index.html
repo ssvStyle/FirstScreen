@@ -2,9 +2,16 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;800&display=swap" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
-    <script src="js/function.js"></script>
+
     <title>Hillel</title>
 </head>
 <body>
@@ -30,14 +37,18 @@
                 </nav>
                 <nav class="header__nav__contact">
                     <div class="header__nav">
-                        <img src="images/phone-call.svg" alt="">
-                        <span>+38 (093) 543 77 47</span>
-                        <img src="images/email.svg" alt="">
-                        <a class="email" href="mailto:kyiv@ithillel@gmail.com">kyiv@ithillel@gmail.com</a>
+                        <div>
+                            <img src="images/phone-call.svg" alt="">
+                            <span>+38 (093) 543 77 47</span>
+                        </div>
+                        <div>
+                            <img src="images/email.svg" alt="">
+                            <a class="email" href="mailto:kyiv@ithillel@gmail.com">kyiv@ithillel@gmail.com</a>
+                        </div>
                     </div>
                     <div class="header__nav__lang">
                         <a href="" class="header__nav__selected">Рус</a>
-                        <a href="" class="header__link" >Укр</a>
+                        <a href="" class="header__link">Укр</a>
                     </div>
                 </nav>
             </header>
@@ -48,15 +59,17 @@
                     <div><img src="images/logo.svg" alt=""></div>
                     <span class="learn">Учись ради мечты!</span>
                     <div class="info__button">
-                        <button id="corse_registr" class="button" href="">Записаться на курс</button>
+                        <button type="button" data-toggle="modal" data-target="#hillelModal" class="button" href="">
+                            Записаться на курс
+                        </button>
                     </div>
                 </div>
                 <div class="info__map">
-                    <img src="images/map.svg" alt="">
+                    <img src="images/map.svg" class="map" alt="">
                     <div class="info__map__kiev">
                         <span>киев</span>
                         <img src="images/city.svg" alt="">
-                        <img  class="point" src="images/map_point.svg" alt="">
+                        <img class="point" src="images/map_point.svg" alt="">
                     </div>
                     <div class="info__map__odessa">
                         <span>одесса</span>
@@ -140,55 +153,129 @@
                     </div>
                 </div>
             </section>
-            <div class="modal" id="modal">
-                <section class="form">
-                    <div class="form__header">
-                        <h2>Заявка на регистрацию</h2>
-                        <img id="corse_registr_close" class="registr_close" src="images/to-close.svg" alt="">
-                    </div>
-                    <div class="form__question">
-                        <span class="callBack">?</span>
-                        <p>Оставьте ваши контактные данные,<br> и мы вам обязательно перезвоним!</p>
-                    </div>
-                    <form method="post">
-                        <div class="form__group">
-                            <div>
-                                <input type="text" id="name" name="name" placeholder="Марк" pattern="^[А-Я]{1}[а-яЁё]{1,}$" required>
-                                <label for="name">Имя</label>
-                            </div>
-                            <div>
-                                <input type="email" id="email" name="email" placeholder="mark@gmail.com" required>
-                                <label for="email">Email</label>
-                            </div>
-                            <div>
-                                <input type="tel" id="phone" name="phone" placeholder="+380xxxxxxxxx" pattern="^\+380[0-9]{9}$"  required>
-                                <label for="phone">Телефон</label>
-                            </div>
-                            <div>
-                                <select id="town" required>
-                                    <option selected>Киев</option>
-                                    <option>Харьков</option>
-                                    <option>Днепр</option>
-                                    <option>Одесса</option>
-                                </select>
-                                <label for="town">Город</label>
-                            </div>
-                            <div>
-                                <select id="cours" required>
-                                    <option selected disabled value="">Выберите</option>
-                                    <option>Front-end</option>
-                                    <option>Front-end pro</option>
-                                </select>
-                                <label for="cours">Курс</label>
-                            </div>
+            <div class="modal fade" id="hillelModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <section class="form modal-dialog">
+                    <div class="modal-content">
+                        <div class="form__header">
+                            <h2>Заявка на регистрацию</h2>
+                            <button type="button" class="registr_close" data-dismiss="modal"></button>
                         </div>
-                        <button type="submit">ОСТАВИТЬ ЗАЯВКУ</button>
-                    </form>
+                        <div class="form__question">
+                            <span class="callBack">?</span>
+                            <p>Оставьте ваши контактные данные,<br> и мы вам обязательно перезвоним!</p>
+                        </div>
+                        <form method="post">
+                            <div class="form__group">
+                                <div>
+                                    <input type="text" id="name" name="name" placeholder="Марк"
+                                           pattern="^[А-Я]{1}[а-яЁё]{1,}$" required>
+                                    <label for="name">Имя</label>
+                                </div>
+                                <div>
+                                    <input type="email" id="email" name="email" placeholder="mark@gmail.com" required>
+                                    <label for="email">Email</label>
+                                </div>
+                                <div>
+                                    <input type="tel" id="phone" name="phone" placeholder="+380xxxxxxxxx"
+                                           pattern="^\+380[0-9]{9}$" required>
+                                    <label for="phone">Телефон</label>
+                                </div>
+                                <div>
+                                    <select id="town" required>
+                                        <option selected>Киев</option>
+                                        <option>Харьков</option>
+                                        <option>Днепр</option>
+                                        <option>Одесса</option>
+                                    </select>
+                                    <label for="town">Город</label>
+                                </div>
+                                <div>
+                                    <select id="cours" required>
+                                        <option selected disabled value="">Выберите</option>
+                                        <option>Front-end</option>
+                                        <option>Front-end pro</option>
+                                    </select>
+                                    <label for="cours">Курс</label>
+                                </div>
+                            </div>
+                            <button type="submit">ОСТАВИТЬ ЗАЯВКУ</button>
+                        </form>
+                    </div>
                 </section>
+            </div>
+
+            <h2>Отзывы Выпускников Школы</h2>
+
+            <div id="carouselExampleCaptions" class="carousel slide" data-ride="carousel">
+                <ol class="carousel-indicators">
+                    <li data-target="#carouselExampleCaptions" data-slide-to="0" class="active"></li>
+                    <li data-target="#carouselExampleCaptions" data-slide-to="1"></li>
+                    <li data-target="#carouselExampleCaptions" data-slide-to="2"></li>
+                </ol>
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <p class="review">
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad alias amet animi aspernatur assumenda atque cum deserunt dolore dolorem doloribus error excepturi hic illum impedit in incidunt laudantium magni nihil nisi nobis omnis pariatur perferendis possimus quaerat qui quod ratione rem repudiandae sed soluta, ullam voluptate, voluptatem voluptates. Architecto at cum error fugit id itaque labore. Doloremque ducimus labore nobis. Ab ad aliquid amet aperiam cupiditate eos esse et facere harum iste maxime odit omnis perferendis quod quos, sapiente similique!
+                        </p>
+                        <div class="userBlock">
+                            <div class="round">
+                                <img src="images/unnamed.png" alt="user">
+                            </div>
+                            <a href="">UserName</a>
+                            <span class="raitingStar"></span>
+                            <span class="raitingStar"></span>
+                            <span class="raitingStar"></span>
+                            <span class="raitingStar"></span>
+                            <span class="raitingStar"></span>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <p class="review">
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad alias amet animi aspernatur assumenda atque cum deserunt dolore dolorem doloribus error excepturi hic illum impedit in incidunt laudantium magni nihil nisi nobis omnis pariatur perferendis possimus quaerat qui quod ratione rem repudiandae sed soluta, ullam voluptate, voluptatem voluptates. Architecto at cum error fugit id itaque labore. Doloremque ducimus labore nobis. Ab ad aliquid amet aperiam cupiditate eos esse et facere harum iste maxime odit omnis perferendis quod quos, sapiente similique!
+                        </p>
+                        <div class="userBlock">
+                            <div class="round">
+                                <img src="images/unnamed.png" alt="user">
+                            </div>
+                            <a href="">UserName</a>
+                            <span class="raitingStar"></span>
+                            <span class="raitingStar"></span>
+                            <span class="raitingStar"></span>
+                            <span class="raitingStar"></span>
+                            <span class="raitingStar"></span>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <p class="review">
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad alias amet animi aspernatur assumenda atque cum deserunt dolore dolorem doloribus error excepturi hic illum impedit in incidunt laudantium magni nihil nisi nobis omnis pariatur perferendis possimus quaerat qui quod ratione rem repudiandae sed soluta, ullam voluptate, voluptatem voluptates. Architecto at cum error fugit id itaque labore. Doloremque ducimus labore nobis. Ab ad aliquid amet aperiam cupiditate eos esse et facere harum iste maxime odit omnis perferendis quod quos, sapiente similique!
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad alias amet animi aspernatur assumenda atque cum deserunt dolore dolorem doloribus error excepturi hic illum impedit in incidunt laudantium magni nihil nisi nobis omnis pariatur perferendis possimus quaerat qui quod ratione rem repudiandae sed soluta, ullam voluptate, voluptatem voluptates. Architecto at cum error fugit id itaque labore. Doloremque ducimus labore nobis. Ab ad aliquid amet aperiam cupiditate eos esse et facere harum iste maxime odit omnis perferendis quod quos, sapiente similique!
+                        </p>
+                        <div class="userBlock">
+                            <div class="round">
+                                <img src="images/unnamed.png" alt="user">
+                            </div>
+                            <a href="">UserName</a>
+                            <span class="raitingStar"></span>
+                            <span class="raitingStar"></span>
+                            <span class="raitingStar"></span>
+                            <span class="raitingStar"></span>
+                            <span class="raitingStar"></span>
+                        </div>
+                    </div>
+                </div>
+                <a class="carousel-control-prev" href="#carouselExampleCaptions" role="button" data-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Previous</span>
+                </a>
+                <a class="carousel-control-next" href="#carouselExampleCaptions" role="button" data-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Next</span>
+                </a>
             </div>
         </main>
     </div>
 </div>
+<script src="js/bootstrap.min.js"></script>
 
 </body>
 </html>
